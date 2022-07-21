@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My To-Do List!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Album Details: </h1>
+
+    <h2>@Model["album"].Title</h2>
+    <h3>@Model["album"].Artist</h3>
+    <h3>@Model["album"].Genre</h3>
+    <h3>Category: @Model["category"].Name</h3>
+
+    <a href='/categories/@Model["category"].Id/albums/new'>Add another album</a>
+    <a href='/categories'>View all albums</a>
+    <form action='/categories/@Model["category"].Id/albums/@Model["album"].Id/delete' method="post">
+      <button type="submit" name="button">Delete this album</button>
+    </form>
+  </body>
+</html>

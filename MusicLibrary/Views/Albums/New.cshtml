@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Music Library</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+  <body>
+  <h1> Add a new album to @Model.Name</h1>
+    <form action="/categories/@Model.Id/albums" method="post">
+    <input id="categoryId" name="categoryId" type="hidden" value="@Model.Id">
+      <label for="title">Album Title</label>
+      <input id="title" name="title" type="text">      
+      <label for="artist">Album Artist</label>
+      <input id="artist" name="artist" type="text">
+      <button type="submit">Add Album</button>
+    </form>
+  </body>
+</html>
